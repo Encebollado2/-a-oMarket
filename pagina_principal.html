@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÑañoMarket | Compra y Vende en la U</title>
+    <link rel="shortcut icon" href="Images/ñañoo.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="Css/Normalize.css">
+    
+    <link rel="stylesheet" href="Css/paginap.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__content">
+            <a href="#" class="header__logo">
+                <span class="material-icons-round">storefront</span> ÑañoMarket
+            </a>
+
+            <div class="header__search">
+                <span class="material-icons-round icon">search</span>
+                <input type="text" placeholder="¿Qué buscas hoy, ñaño?">
+            </div>
+
+           <div class="header__actions">
+    <button class="btn-primary">
+        <span class="material-icons-round">add</span> <span>Publicar</span>
+    </button>
+    
+    <div class="profile-wrapper">
+        <img src="Images/profile.svg" 
+             onerror="this.src='https://ui-avatars.com/api/?name=Ñaño+User&background=random'" 
+             class="profile-pic" 
+             alt="Perfil"
+             onclick="toggleMenu()">
+        
+        <div class="profile-dropdown" id="profileMenu">
+            <div class="dropdown-header">
+                <div class="user-info">
+                    <h4>Ñaño User</h4>
+                    <span>Estudiante</span>
+                </div>
+            </div>
+            <hr>
+            
+            <a href="#" class="dropdown-item">
+                <span class="material-icons-round">person</span>
+                <p>Mi Perfil</p>
+            </a>
+            
+            <a href="#" class="dropdown-item">
+                <span class="material-icons-round">shopping_bag</span>
+                <p>Mis Ventas</p>
+            </a>
+            
+            <a href="#" class="dropdown-item">
+                <span class="material-icons-round">favorite</span>
+                <p>Favoritos</p>
+            </a>
+            
+            <a href="#" class="dropdown-item logout">
+                <span class="material-icons-round">logout</span>
+                <p>Cerrar Sesión</p>
+            </a>
+        </div>
+    </div>
+    </div>
+        </div>
+    </header>
+
+    <div class="hero-wrapper">
+        <section class="hero">
+            <div class="hero__content">
+                <h1>Compra y vende entre estudiantes</h1>
+                <p>Seguro, rápido y solo para universitarios del Ecuador.</p>
+            </div>
+        </section>
+    </div>
+
+    <main class="container">
+        <section class="filters-section">
+            <div class="filters-container">
+                <div class="categories-list">
+                    <button class="chip active">Todo</button>
+                    <button class="chip">Tecnología</button>
+                    <button class="chip">Ropa</button>
+                    <button class="chip">Libros</button>
+                    <button class="chip">Muebles</button>
+                </div>
+
+                <div class="sort-options">
+                    <div class="custom-select">
+                        <select>
+                            <option selected disabled>Precio</option>
+                            <option>Menos de $5</option>
+                            <option>Menos de $10</option>
+                            <option>Menos de $20</option>
+                        </select>
+                        <span class="material-icons-round">expand_more</span>
+                    </div>
+
+                    <div class="custom-select">
+                        <select>
+                            <option selected disabled>Condición</option>
+                            <option>Nuevo</option>
+                            <option>Usado</option>
+                        </select>
+                        <span class="material-icons-round">expand_more</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="kits-section">
+        <div class="section-header">
+            <h2 class="section-title-sm">🎒 Kits de Supervivencia</h2>
+            <a href="#" class="view-all">Ver todos los packs</a>
+        </div>
+        
+        <div class="kits-grid">
+            <article class="kit-card">
+                <div class="kit-image">
+                    <img src="https://images.unsplash.com/photo-1505693416388-b0346ef4143d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pack Dormitorio">
+                    <span class="badge-kit">Pack Foráneo</span>
+                </div>
+                <div class="kit-content">
+                    <h3>Pack "Recién Llegado"</h3>
+                    <p class="kit-desc">Incluye: Cama 1.5 plz + Colchón + Escritorio básico.</p>
+                    <div class="kit-footer">
+                        <span class="price">$150.00</span>
+                        <button class="btn-primary-sm">Ver Pack</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="kit-card">
+                <div class="kit-image">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pack Cocina">
+                    <span class="badge-kit">Pack Chef</span>
+                </div>
+                <div class="kit-content">
+                    <h3>Pack Cocina Básica</h3>
+                    <p class="kit-desc">Incluye: Cocineta 2 hornillas + Tanque de gas + Olla.</p>
+                    <div class="kit-footer">
+                        <span class="price">$65.00</span>
+                        <button class="btn-primary-sm">Ver Pack</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+        <section class="products-grid">
+            <article class="product-card">
+                <div class="card-image">
+                    <img src="Images/product1.jpg" onerror="this.src='https://via.placeholder.com/300'" alt="Calculadora">
+                    <span class="badge">Nuevo</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Calculadora Científica</h3>
+                    <div class="card-location">
+                        <span class="material-icons-round" style="font-size: 14px;">place</span> ESPOCH Morona Santiago
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">$12.00</span>
+                        <button class="btn-icon" title="Chat"><span class="material-icons-round">chat_bubble_outline</span></button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-image">
+                    <img src="Images/product2.jpg" onerror="this.src='https://via.placeholder.com/300'" alt="Libro">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Libro: Cálculo II</h3>
+                    <div class="card-location">
+                        <span class="material-icons-round" style="font-size: 14px;">place</span> ESPOCH Riobamba
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">$8.00</span>
+                        <button class="btn-icon" title="Chat"><span class="material-icons-round">chat_bubble_outline</span></button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-image">
+                    <img src="Images/product3.jpg" onerror="this.src='https://via.placeholder.com/300'" alt="Audifonos">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Audífonos Bluetooth</h3>
+                    <div class="card-location">
+                        <span class="material-icons-round" style="font-size: 14px;">place</span> UTPL Loja
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">$15.00</span>
+                        <button class="btn-icon" title="Chat"><span class="material-icons-round">chat_bubble_outline</span></button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-image">
+                    <img src="Images/product4.jpg" onerror="this.src='https://via.placeholder.com/300'" alt="Monitor">
+                    <span class="badge">Usado</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Monitor 22”</h3>
+                    <div class="card-location">
+                        <span class="material-icons-round" style="font-size: 14px;">place</span> UNACH Riobamba
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">$40.00</span>
+                        <button class="btn-icon" title="Chat"><span class="material-icons-round">chat_bubble_outline</span></button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <section class="ads-section">
+        <h2 class="section-title-center">🍔 Tu Zona U: Comida y Arriendos</h2>
+        <div class="ads-grid">
+            
+            <article class="ad-card food">
+                <div class="ad-image">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pizza">
+                    <span class="ad-tag">Promo Estudiante</span>
+                </div>
+                <div class="ad-content">
+                    <div class="ad-header">
+                        <h3>Pizzería "El Ñaño"</h3>
+                        <span class="rating">⭐ 4.8</span>
+                    </div>
+                    <p>Presenta tu carnet y recibe bebida gratis con tu pizza mediana. ¡A 5 min de la U!</p>
+                    <button class="btn-outline">Ver ubicación</button>
+                </div>
+            </article>
+
+            <article class="ad-card rent">
+                <div class="ad-image">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Departamento">
+                    <span class="ad-tag">Arriendo</span>
+                </div>
+                <div class="ad-content">
+                    <div class="ad-header">
+                        <h3>Suites Universitarias "Los Andes"</h3>
+                        <span class="price-tag">$120/mes</span>
+                    </div>
+                    <p>Habitaciones amobladas, incluye internet y agua caliente. Sector Politécnica.</p>
+                    <button class="btn-outline">Contactar dueño</button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-title">¿Por qué ÑañoMarket?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons-round">verified_user</span>
+                    </div>
+                    <h3>Comunidad verificada</h3>
+                    <p>Usuarios con correo institucional para evitar estafas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons-round">lock</span>
+                    </div>
+                    <h3>Seguro y confiable</h3>
+                    <p>Solo ñaños de universidades del país.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons-round">bolt</span>
+                    </div>
+                    <h3>Fácil de usar</h3>
+                    <p>Publicas en segundos y te contactan al instante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 ÑañoMarket — Hecho con ❤️ para estudiantes.</p>
+    </footer>
+    <script src="Js/dropdown.js"></script>
+
+
+    <div id="modalPublicar" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-modal" onclick="cerrarModal()">&times;</span>
+        <h2>Publicar Nuevo Producto</h2>
+        <form id="formProducto">
+            <input type="text" id="prodNombre" placeholder="¿Qué vas a vender?" required>
+            <input type="number" id="prodPrecio" placeholder="Precio en dólares ($)" step="0.01" required>
+            <input type="text" id="prodUbicacion" placeholder="Universidad (Ej: ESPOCH, USFQ)" required>
+            <input type="url" id="prodImagen" placeholder="URL de la imagen del producto" required>
+            
+            <button type="submit" class="btn-primary" style="margin-top: 15px; width: 100%;">Subir a ÑañoMarket</button>
+        </form>
+    </div>
+</div>
+    <script src="Js/publicar.js"></script>
+</body>
+</html>
